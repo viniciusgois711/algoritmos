@@ -1,3 +1,5 @@
+// Escreva um algoritmo que receba valores em um vetor e imprima ORDENADO se o vetor estiver em ordem crescente.
+// Qual e função de custo de pior caso e sua ordem de complexidade O?
 #include <stdio.h>
 
 
