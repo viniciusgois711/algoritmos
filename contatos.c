@@ -28,11 +28,17 @@ void listarContatos(struct Contatos* contato[], int tamanho){
     }
 };
 
+void editarContato(struct Contatos* contato[], int indice, char novoNome[], char novoTelefone[]){
+    strcpy(contato[indice]->nome, novoNome);
+    strcpy(contato[indice]->telefone, novoTelefone);   
+}
+
 int main(){
     int op = 0;
     char nome[50];
     char telefone[15];
     int contador = 0;
+    int indice;
     struct Contatos* contatos[100]; 
 
     while(op!=5){
@@ -50,6 +56,15 @@ int main(){
             break;
             case 2:
                 listarContatos(contatos, contador);
+            break;
+            case 3:
+                printf("\nDigite o indice do contato que voce deseja alterar:");
+                scanf("%d", &indice);
+                printf("\nDigite o novo nome:\n");
+                scanf("%s", nome);
+                printf("\nDigite o novo telefone:\n");
+                scanf("%s", telefone);
+                editarContato(contatos, indice, nome, telefone);
         }
     }
 }   
