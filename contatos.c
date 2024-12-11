@@ -21,11 +21,9 @@ void listarContatos(struct Contatos* contato[], int tamanho){
         printf("Nenhum contato cadastrado");
     }else{
         for(int i=0; i<tamanho; i++){
-            if(contato[i]!=NULL){
-                printf("\nContato:");
-                printf("\nNome: %s", contato[i]->nome); 
-                printf("\nTelefone: %s", contato[i]->telefone);
-            }
+            printf("\nContato:");
+            printf("\nNome: %s", contato[i]->nome); 
+            printf("\nTelefone: %s", contato[i]->telefone);
         }
     }
 };
@@ -81,8 +79,6 @@ int main(){
 
                 excluirContato(contatos, indice);
                 contador--;
-                
-
         }
     }
 }   

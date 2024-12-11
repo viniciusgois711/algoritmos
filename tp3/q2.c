@@ -12,6 +12,7 @@ int main(){
 
     printf("Digite a quantidade de alunos");
     scanf("%d", qtdAlunos);
+    
 
 
 }
